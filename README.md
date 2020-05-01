@@ -1,7 +1,21 @@
 # IOT-Data-Generator
 
+Python script to generate IOT sample data.
 
+Creates sample data of the following:
+sensor101 is to measuretemp.
+sensor102 measures pressure
+sensor103 measures level
+sensor104 measures voltage
 
+sensrec['sendatetime'] = jmsg.get("timestamp")+jmsg.get("millis")
+sensrec['timezone'] = jmsg.get("timezone")
+sensrec['sensor'] = jmsg.get("sensor")
+sensrec['type'] = jmsg.get("senstype")
+sensrec['metric'] = jmsg.get("metric")
+
+Output of the script to stdout
+currentTemp', 'currentPresure', 'currentLevel', 'currentVoltage
 
 Example of output:
 {"sendatetime": "2020-01-15T14:29:56235", "timezone": "-0500", "sensor": "sensor102", "type": "currentPresure", "metric": 1000.0}
